@@ -27,9 +27,9 @@ pipeline {
          /* Final stage of build; Push the 
             docker image to our OCI private Registry*/
         steps {
-            sh "sudo docker login -u '<username>' -p '<ocir-token>' <region-prefix-name>"
-            sh "sudo docker tag customapp:1 <region-prefix-name>/<your-tenancy-namespace>/customapp:custom"
-            sh 'sudo docker push <region-prefix-name>/<your-tenancy-namespace>/customapp:custom'
+            sh "sudo docker login -u 'grhcwqkp279z/jenkins' -p 'oAyAs4usP1YgUr)3kw(;' gru.ocir.io"
+            sh "sudo docker tag customapp:1 gru.ocir.io/grhcwqkp279z/customapp:custom"
+            sh 'sudo docker push gru.ocir.io/grhcwqkp279z/customapp:custom'
             
            }
          } 
