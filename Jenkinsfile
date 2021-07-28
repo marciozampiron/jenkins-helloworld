@@ -27,7 +27,7 @@ pipeline {
          /* Final stage of build; Push the 
             docker image to our OCI private Registry*/
         steps {
-            sh "sudo docker login -u 'jenkins' -p '<b#qe}WlZcf{)-qgHcW4' iad.ocir.io"
+            sh "sudo docker login -u 'marciozampiron/jenkins' -p '<b#qe}WlZcf{)-qgHcW4' iad.ocir.io"
             sh "sudo docker tag customapp:1 iad.ocir.io/marciozampiron/customapp:custom"
             sh 'sudo docker push iad.ocir.io/marciozampiron/customapp:custom'
             
